@@ -129,7 +129,7 @@ hr { border-color: #1f2b3e !important; }
 """, unsafe_allow_html=True)
 
 # ─── Backend URL ──────────────────────────────────────────────────────────────
-SERVER = st.secrets["backend_server"]
+SERVER = st.secrets.get("backend_server", "https://demo.api.com")
 
 # ─── Categories & Payment Methods ─────────────────────────────────────────────
 CATEGORIES = [
