@@ -141,7 +141,7 @@ PAYMENT_METHODS = ["💳 Card", "📲 UPI", "💵 Cash"]
 # ─── Helper: safe GET ─────────────────────────────────────────────────────────
 def safe_get(url, params=None):
     try:
-        r = requests.get(url, params=params, timeout=10)
+        r = requests.get(url, params=params, timeout=60)
         return r
     except requests.exceptions.ConnectionError:
         st.error("❌ Cannot connect to backend. Check your backend URL in secrets.")
